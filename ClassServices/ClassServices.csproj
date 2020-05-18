@@ -6,4 +6,8 @@
     <RootNamespace>BillingSoftware.ClassServices</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DapperService\DapperService.csproj" />
+  </ItemGroup>
+
 </Project>

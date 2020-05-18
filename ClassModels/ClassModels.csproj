@@ -6,4 +6,8 @@
     <RootNamespace>BillingSoftware.ClassModels</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataAnnotation\DataAnnotation.csproj" />
+  </ItemGroup>
+
 </Project>
