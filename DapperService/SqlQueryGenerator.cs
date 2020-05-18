@@ -8,7 +8,7 @@ using BillingSoftware.DataAnnotation;
 
 namespace BillingSoftware.DapperService
 {
-    public class SqlQueryGenerator<T> where T : class
+    public class SqlQueryGenerator<T> : IDisposable where T : class
     {
         public SqlQueryGenerator()
         {
