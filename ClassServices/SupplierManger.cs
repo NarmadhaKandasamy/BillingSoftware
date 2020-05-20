@@ -25,15 +25,15 @@ namespace BillingSoftware.ClassServices
         {
             using (var sqlquerygenerator = new SqlQueryGenerator<Supplier>())
             {
-                return dapperService.Insert<Customer>(sqlquerygenerator.GetUpdate(), supplier);
+                return dapperService.Update<Supplier>(sqlquerygenerator.GetUpdate(), supplier);
             }
         }
 
-        public Int32 Get(Int32 Id)
+        public Supplier Get(Int32 Id)
         {
             using (var sqlquerygenerator = new SqlQueryGenerator<Supplier>())
             {
-                return dapperService.Insert<Supplier>(sqlquerygenerator.GetSelect(new { Id }), Id);
+                return dapperService.Get<Supplier>(sqlquerygenerator.GetSelect(new { Id }), Id);
             }
         }
 
