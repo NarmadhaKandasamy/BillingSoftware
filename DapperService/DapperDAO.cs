@@ -22,42 +22,42 @@ namespace BillingSoftware.DapperService
             _commandtimeout = commandtimeout;
         }
 
-        public Int32 Insert<T>(string query,Object obj,int Timeout=30,CommandType commandType=CommandType.Text)
+        public Int32 Insert<T>(string query,Object obj, CommandType commandType=CommandType.Text)
         {
-            return Execute<T>(query, obj,Timeout, commandType: commandType);
+            return Execute<T>(query, obj, commandType: commandType);
         }
 
-        public Int32 Update<T>(string query, Object obj, int Timeout = 30, CommandType commandType = CommandType.Text)
+        public Int32 Update<T>(string query, Object obj, CommandType commandType = CommandType.Text)
         {
-            return Execute<T>(query, obj, Timeout, commandType: commandType);
+            return Execute<T>(query, obj, commandType: commandType);
         }
 
-        public T Get<T>(string query, Object obj, int Timeout = 30, CommandType commandType = CommandType.Text)
+        public T Get<T>(string query, Object obj, CommandType commandType = CommandType.Text)
         {
             using (dbConnection = new SqlConnection(_sqlconstring))
             {
-                return dbConnection.Query<T>(query, obj, commandTimeout: Timeout, commandType: commandType).SingleOrDefault();
+                return dbConnection.Query<T>(query, obj, commandTimeout: _commandtimeout, commandType: commandType).SingleOrDefault();
             }
         }
 
-        public IEnumerable<T> GetAll<T>(string query, Object obj, int Timeout = 30, CommandType commandType = CommandType.Text)
+        public IEnumerable<T> GetAll<T>(string query, CommandType commandType = CommandType.Text)
         {
             using (dbConnection = new SqlConnection(_sqlconstring))
             {
-                return dbConnection.Query<T>(query, obj, commandTimeout: Timeout, commandType: commandType);
+                return dbConnection.Query<T>(query, commandTimeout: _commandtimeout, commandType: commandType);
             }
         }
 
-        public Int32 Delete<T>(string query, Object obj, int Timeout = 30, CommandType commandType = CommandType.Text)
+        public Int32 Delete<T>(string query, Object obj, CommandType commandType = CommandType.Text)
         {
-            return Execute<T>(query, obj, Timeout, commandType: commandType);
+            return Execute<T>(query, obj, commandType: commandType);
         }
 
-        private Int32 Execute<T>(string query, Object obj, int Timeout = 30, CommandType commandType = CommandType.Text)
+        private Int32 Execute<T>(string query, Object obj, CommandType commandType = CommandType.Text)
         {
             using (dbConnection = new SqlConnection(_sqlconstring))
             {
-                return dbConnection.Execute(query, obj, commandTimeout: Timeout, commandType: commandType);
+                return dbConnection.Execute(query, obj, commandTimeout: _commandtimeout, commandType: commandType);
             }
         }
 
