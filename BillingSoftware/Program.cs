@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BillingSoftware.ClassModels;
+using BillingSoftware.ClassServices;
 
 namespace BillingSoftware
 {
@@ -14,6 +16,9 @@ namespace BillingSoftware
         [STAThread]
         static void Main()
         {
+            CustomerManager customerManager = new CustomerManager();
+            List<Customer> customers=  customerManager.GetAll();
+            
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

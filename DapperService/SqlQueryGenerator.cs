@@ -256,7 +256,7 @@ namespace BillingSoftware.DapperService
                 var columnName = p;
                 var propertyName = p;
 
-                if (propertyMetadata != null)
+                if (propertyMetadata != null)   
                 {
                     columnName = propertyMetadata.ColumnName;
                     propertyName = propertyMetadata.Name;

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Configuration;
 using BillingSoftware.DapperService;
+using System.Reflection;
 
 namespace BillingSoftware.ClassServices
 {
@@ -11,7 +13,9 @@ namespace BillingSoftware.ClassServices
 
         public BaseManager()
         {
-            dapperService = new DapperDAO("",60);
+            //dapperService = new DapperDAO(ConfigurationManager.AppSettings["Dbconnectionstring"],60);
+            dapperService = new DapperDAO(@"Server=.\SQLExpress;AttachDbFilename=C:\Working\BillingSoftware\Data\BillingBase.mdf;Database=dbname;Trusted_Connection=Yes;", 60);
         }
     }
 }
+    

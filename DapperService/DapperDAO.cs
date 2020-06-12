@@ -43,7 +43,7 @@ namespace BillingSoftware.DapperService
         public IEnumerable<T> GetAll<T>(string query, CommandType commandType = CommandType.Text)
         {
             using (dbConnection = new SqlConnection(_sqlconstring))
-            {
+            {   
                 return dbConnection.Query<T>(query, commandTimeout: _commandtimeout, commandType: commandType);
             }
         }

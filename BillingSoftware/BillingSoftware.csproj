@@ -6,4 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ClassServices\ClassServices.csproj" />
+  </ItemGroup>
+
 </Project>

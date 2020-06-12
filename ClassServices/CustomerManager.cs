@@ -6,11 +6,11 @@ using BillingSoftware.DapperService;
 
 namespace BillingSoftware.ClassServices
 {
-    public class CustomerManager:BaseManager
+    public class CustomerManager : BaseManager
     {
         public CustomerManager()
         {
-
+            
         }
 
         public Int32 Insert(Customer customer)
