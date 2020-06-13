@@ -1,6 +1,6 @@
-﻿namespace WinAppBillingSoftware.Master
+﻿namespace BillingSoftware.Master
 {
-    partial class frmProduct
+    partial class frmMainPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
-            // frmProduct
+            // menuStrip2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(30, 450);
+            this.menuStrip2.TabIndex = 0;
+            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked);
+            // 
+            // frmMainPage
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(252)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "frmProduct";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Product";
+            this.Controls.Add(this.menuStrip2);
+            this.Name = "frmMainPage";
+            this.Text = "frmMainPage";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip menuStrip2;
     }
 }

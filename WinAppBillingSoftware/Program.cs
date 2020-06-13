@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WinAppBillingSoftware.Master;
+using WinAppBillingSoftware.Admin;
 
 namespace WinAppBillingSoftware
 {
@@ -17,7 +17,7 @@ namespace WinAppBillingSoftware
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainPage());
+            Application.Run(new frmLogin());
         }
     }
 }

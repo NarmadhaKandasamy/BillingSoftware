@@ -50,16 +50,21 @@
             this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.receiptToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.statusStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripProgressBar1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 428);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(800, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // menuStrip1
             // 
@@ -95,37 +100,40 @@
             // 
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
             this.customerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.customerToolStripMenuItem.Text = "Customer";
+            this.customerToolStripMenuItem.Text = "&Customer";
+            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // supplierToolStripMenuItem
             // 
             this.supplierToolStripMenuItem.Name = "supplierToolStripMenuItem";
             this.supplierToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.supplierToolStripMenuItem.Text = "Supplier";
+            this.supplierToolStripMenuItem.Click += new System.EventHandler(this.supplierToolStripMenuItem_Click);
             // 
             // productToolStripMenuItem
             // 
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
             this.productToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.productToolStripMenuItem.Text = "Product";
+            this.productToolStripMenuItem.Text = "&Product";
+            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // discountToolStripMenuItem
             // 
             this.discountToolStripMenuItem.Name = "discountToolStripMenuItem";
             this.discountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.discountToolStripMenuItem.Text = "Discount";
+            this.discountToolStripMenuItem.Text = "&Discount";
             // 
             // taxToolStripMenuItem
             // 
             this.taxToolStripMenuItem.Name = "taxToolStripMenuItem";
             this.taxToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.taxToolStripMenuItem.Text = "Tax";
+            this.taxToolStripMenuItem.Text = "&Tax";
             // 
             // categoryToolStripMenuItem
             // 
             this.categoryToolStripMenuItem.Name = "categoryToolStripMenuItem";
             this.categoryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.categoryToolStripMenuItem.Text = "Category";
+            this.categoryToolStripMenuItem.Text = "&Category";
             // 
             // purchaseToolStripMenuItem
             // 
@@ -134,7 +142,7 @@
             this.returnToolStripMenuItem});
             this.purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
             this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.purchaseToolStripMenuItem.Text = "Purchase";
+            this.purchaseToolStripMenuItem.Text = "P&urchase";
             // 
             // salesToolStripMenuItem
             // 
@@ -143,7 +151,7 @@
             this.creditToolStripMenuItem});
             this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
             this.salesToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
-            this.salesToolStripMenuItem.Text = "Sales";
+            this.salesToolStripMenuItem.Text = "&Sales";
             // 
             // reportToolStripMenuItem
             // 
@@ -152,7 +160,7 @@
             this.stockToolStripMenuItem});
             this.reportToolStripMenuItem.Name = "reportToolStripMenuItem";
             this.reportToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.reportToolStripMenuItem.Text = "Report";
+            this.reportToolStripMenuItem.Text = "&Report";
             // 
             // configurationToolStripMenuItem
             // 
@@ -165,6 +173,7 @@
             this.aboutUsToolStripMenuItem.Name = "aboutUsToolStripMenuItem";
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.aboutUsToolStripMenuItem.Text = "About us";
+            this.aboutUsToolStripMenuItem.Click += new System.EventHandler(this.aboutUsToolStripMenuItem_Click);
             // 
             // orderToolStripMenuItem
             // 
@@ -214,10 +223,16 @@
             this.receiptToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.receiptToolStripMenuItem.Text = "Receipt";
             // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 16);
+            // 
             // frmMainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
@@ -227,6 +242,8 @@
             this.Name = "frmMainPage";
             this.Text = "Billing Software";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -258,5 +275,6 @@
         private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem paymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem receiptToolStripMenuItem;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
     }
 }
