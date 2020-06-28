@@ -32,6 +32,7 @@ namespace WinAppBillingSoftware.Admin
         {
             if (txtUserName.Text.ToLower() == "admin" && txtPassword.Text == "12345")
             {
+                this.Hide();
                 frmMainPage frmMainPage = new frmMainPage();
                 frmMainPage.Show();
             }

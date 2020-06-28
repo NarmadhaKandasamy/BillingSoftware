@@ -33,8 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.1\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -141,6 +147,7 @@
     <EmbeddedResource Include="Utilities\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,6 +164,16 @@
   <ItemGroup>
     <Folder Include="Report\" />
     <Folder Include="Transaction\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassModels\ClassModels.csproj">
+      <Project>{25f88d24-a2ea-4192-a1f1-b914ae59ccc0}</Project>
+      <Name>ClassModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassServices\ClassServices.csproj">
+      <Project>{f9d4818a-184e-4ba9-af21-d23bca2b64d2}</Project>
+      <Name>ClassServices</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
