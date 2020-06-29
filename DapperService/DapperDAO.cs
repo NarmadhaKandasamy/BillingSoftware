@@ -22,6 +22,14 @@ namespace BillingSoftware.DapperService
             _commandtimeout = commandtimeout;
         }
 
+        public Boolean ExecuteQueery(string query)
+        {
+            using (dbConnection = new SqlConnection(_sqlconstring))
+            {
+                return (dbConnection.Execute(query, CommandType.Text) != 0);
+            }
+        }
+
         public Int32 Insert<T>(string query,Object obj, CommandType commandType=CommandType.Text)
         {
             return Execute<T>(query, obj, commandType: commandType);

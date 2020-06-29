@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinAppBillingSoftware.Utilities;
+using BillingSoftware.ClassServices;
 
 namespace WinAppBillingSoftware.Master
 {
@@ -44,6 +45,14 @@ namespace WinAppBillingSoftware.Master
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void dBBackUpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (AdminManager adminManager = new AdminManager())
+            {
+                adminManager.DBbackup();
+            }
         }
     }
 }

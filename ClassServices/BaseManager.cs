@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace BillingSoftware.ClassServices
 {
-    public class BaseManager
+    public class BaseManager : IDisposable
     {
         public static DapperDAO dapperService;
 
@@ -16,6 +16,11 @@ namespace BillingSoftware.ClassServices
             //dapperService = new DapperDAO(ConfigurationManager.AppSettings["Dbconnectionstring"],60);
             dapperService = new DapperDAO(@"Server=.\SQLExpress;AttachDbFilename=C:\Working\BillingSoftware\Data\BillingBase.mdf;Database=dbname;Trusted_Connection=Yes;", 60);
         }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
-    
+        
