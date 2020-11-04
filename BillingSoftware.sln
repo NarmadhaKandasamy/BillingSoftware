@@ -27,8 +27,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BillingService", "BillingSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinAppBillingSoftware", "WinAppBillingSoftware\WinAppBillingSoftware.csproj", "{3C05BD34-1E65-4687-972D-B0FC8CF2630A}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{3B285031-9F0A-4CAB-9A16-91E04B4CB3C2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,8 +61,6 @@ Global
 		{3C05BD34-1E65-4687-972D-B0FC8CF2630A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C05BD34-1E65-4687-972D-B0FC8CF2630A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C05BD34-1E65-4687-972D-B0FC8CF2630A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3B285031-9F0A-4CAB-9A16-91E04B4CB3C2}.Debug|Any CPU.ActiveCfg = Debug
-		{3B285031-9F0A-4CAB-9A16-91E04B4CB3C2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
