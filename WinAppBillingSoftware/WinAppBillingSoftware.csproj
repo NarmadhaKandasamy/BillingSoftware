@@ -121,6 +121,16 @@
     <Compile Include="Models\CommonClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ta.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +164,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Resources\en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ta.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ta.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Utilities\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>

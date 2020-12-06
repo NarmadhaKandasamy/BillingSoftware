@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinAppBillingSoftware.Master;
+using WinAppBillingSoftware.Models;
 
 namespace WinAppBillingSoftware.Admin
 {
     public partial class frmLogin : Form
     {
+       
+
         public frmLogin()
         {
             InitializeComponent();
@@ -46,11 +49,11 @@ namespace WinAppBillingSoftware.Admin
         {
             if (string.IsNullOrEmpty(txtUserName.Text) && string.IsNullOrEmpty(txtPassword.Text))
             {
-                MessageBox.Show("User & Pass Word can't be blank", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("User Name & Pass Word can't be blank", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
             else if (string.IsNullOrEmpty(txtUserName.Text))
             {
-                MessageBox.Show("User Can't be blank", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageBox.Show("User Name Can't be blank", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
             else if (string.IsNullOrEmpty(txtPassword.Text))
             {
@@ -66,6 +69,16 @@ namespace WinAppBillingSoftware.Admin
             {
                 MessageBox.Show("Invalid User", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            label1.Text= CommonClass.resourceManager.GetString("User_name");
+            lbpassword.Text = CommonClass.resourceManager.GetString("Password");
+            groupBox1.Text= CommonClass.resourceManager.GetString("Login");
+            btnOk.Text= CommonClass.resourceManager.GetString("Ok");
+            btCancel.Text = CommonClass.resourceManager.GetString("Cancel");
+            this.Text = CommonClass.resourceManager.GetString("Billing_Software");
         }
     }
 }
