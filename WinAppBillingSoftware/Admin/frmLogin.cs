@@ -30,11 +30,37 @@ namespace WinAppBillingSoftware.Admin
 
         private void btnOk_Click(object sender, EventArgs e)
         {
-            if (txtUserName.Text.ToLower() == "admin" && txtPassword.Text == "12345")
+
+            validateLoginUser();
+        }
+
+        private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                validateLoginUser();
+            }
+        }
+
+        private void validateLoginUser()
+        {
+            if (string.IsNullOrEmpty(txtUserName.Text) && string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("User & Pass Word can't be blank", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrEmpty(txtUserName.Text))
+            {
+                MessageBox.Show("User Can't be blank", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Password Can't be blank", "Validation Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            }
+            else if (txtUserName.Text.Trim().ToLower() == "admin" && txtPassword.Text.Trim() == "12345")
             {
                 this.Hide();
-                frmMainPage frmMainPage = new frmMainPage();
-                frmMainPage.Show();
+                mdiMainPage mdiMainPage = new mdiMainPage();
+                mdiMainPage.Show();               
             }
             else
             {
