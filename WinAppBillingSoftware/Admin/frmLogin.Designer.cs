@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 52);
+            this.label1.Location = new System.Drawing.Point(132, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(181, 49);
+            this.txtUserName.Location = new System.Drawing.Point(238, 62);
             this.txtUserName.MaxLength = 20;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(100, 20);
@@ -59,7 +59,7 @@
             // lbpassword
             // 
             this.lbpassword.AutoSize = true;
-            this.lbpassword.Location = new System.Drawing.Point(75, 91);
+            this.lbpassword.Location = new System.Drawing.Point(132, 104);
             this.lbpassword.Name = "lbpassword";
             this.lbpassword.Size = new System.Drawing.Size(56, 13);
             this.lbpassword.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(181, 84);
+            this.txtPassword.Location = new System.Drawing.Point(238, 97);
             this.txtPassword.MaxLength = 12;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
@@ -77,23 +77,25 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.AutoSize = true;
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.groupBox1.Controls.Add(this.btnOk);
             this.groupBox1.Controls.Add(this.btCancel);
             this.groupBox1.Controls.Add(this.txtPassword);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lbpassword);
             this.groupBox1.Controls.Add(this.txtUserName);
-            this.groupBox1.Location = new System.Drawing.Point(441, 187);
+            this.groupBox1.Location = new System.Drawing.Point(389, 187);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(374, 214);
+            this.groupBox1.Size = new System.Drawing.Size(450, 250);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Login";
             // 
             // btnOk
             // 
-            this.btnOk.Location = new System.Drawing.Point(81, 144);
+            this.btnOk.Location = new System.Drawing.Point(138, 157);
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 5;
@@ -103,7 +105,7 @@
             // 
             // btCancel
             // 
-            this.btCancel.Location = new System.Drawing.Point(194, 144);
+            this.btCancel.Location = new System.Drawing.Point(251, 157);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(75, 23);
             this.btCancel.TabIndex = 6;
@@ -125,7 +127,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

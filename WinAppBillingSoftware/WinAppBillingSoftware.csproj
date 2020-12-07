@@ -126,10 +126,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>en.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\hi.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hi.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\ta.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ta.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Te.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Te.resx</DependentUpon>
     </Compile>
     <Compile Include="Utilities\AboutBox.cs">
       <SubType>Form</SubType>
@@ -168,9 +178,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>en.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\hi.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>hi.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\ta.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ta.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Te.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Te.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Utilities\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>

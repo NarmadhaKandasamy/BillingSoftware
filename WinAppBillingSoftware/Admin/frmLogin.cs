@@ -73,6 +73,10 @@ namespace WinAppBillingSoftware.Admin
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            Point point = new Point((this.Width - groupBox1.Width) / 2, (this.Height - groupBox1.Height) / 2);
+
+            //label2.Text = string.Format("Over all X:{2}, y{3}  :X:{0}, Y:{1}", point.X.ToString(), point.Y.ToString(),this.Width.ToString(), this.Height.ToString());
+            
             label1.Text= CommonClass.resourceManager.GetString("User_name");
             lbpassword.Text = CommonClass.resourceManager.GetString("Password");
             groupBox1.Text= CommonClass.resourceManager.GetString("Login");
