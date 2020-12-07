@@ -4,18 +4,12 @@ using System.Text;
 
 namespace BillingSoftware.ClassModels
 {
-    public class Company
+    public class Company : BaseAddress
     {
-        public Int32 Id { get; set; }
-        public string Code { get; set; }
-        public string Name { get; set; }
-        public string Add1 { get; set; }
-        public string Add2 { get; set; }
-        public string Add3 { get; set; }
-
-        public string City { get; set; }
-
-        public string Phone { get; set; }
-
+        public string Proprietor { get; set; }
+        public string ContactNumber { get; set; }
+        public string Tin { get; set; }
+        public string Registration { get; set; }        
+        public List<BranchDetail> Branches { get; set; }
     }
 }

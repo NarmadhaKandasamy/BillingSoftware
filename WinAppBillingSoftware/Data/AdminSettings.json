@@ -1,0 +1,23 @@
+{
+  "Language": "en",
+  "IsMultipleCompany": true,
+  "CompanyCount": 1,
+  "IsAdminAccount": true,
+  "UserAccountCount": 1,
+  "Trailperiod": 1,
+  "ExpiredDate": "2020-12-31",
+  "Company": [
+    {
+      "id": 1,
+      "Name": "Maruga Software",
+      "Add1": "",
+      "Add2": "",
+      "Add3": "",
+      "City": "",
+      "PinCode": "",
+      "Phone #": "",
+      "State": "",
+      "Country": ""
+    }
+  ]
+}
