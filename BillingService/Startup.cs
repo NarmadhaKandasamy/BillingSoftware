@@ -27,7 +27,7 @@ namespace BillingService
         {
             services.AddCors(options =>
             {
-                options.AddPolicy("AnotherPolicy",
+                options.AddPolicy("CROSPolicy",
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:3000")
